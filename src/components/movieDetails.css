@@ -1,0 +1,157 @@
+.details-container {
+    margin: 10px 30px;
+}
+
+.back-button {
+    background-color: #081C22;
+    color: white;
+    border: none;
+    padding: 20px 50px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+}
+
+.poster {
+    width: 400px;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+.right-column > a {
+    color: black;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+.top-info {
+    display: flex;
+}
+
+.release-date {
+    margin-right: 20px;
+}
+
+.container-genre {
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+.runtime {
+    margin-left: 20px;
+}
+
+.movie-link {
+    margin-top: 14px;
+    color: black;
+    margin-left: 20px;
+}
+
+.wrapper-note {
+    display: flex;
+    align-items: center;
+}
+
+.container-note {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    padding: 10px;
+    border-radius: 50px;
+    margin-right: 20px;
+    background-color: #081C22;
+    color: white;
+    font-size: 20px;
+    line-height: 15px;
+}
+
+.tagline {
+    font-style: italic;
+    opacity: 50%;
+}
+
+span {
+    font-weight: 600;
+    color: rgb(251, 127, 127);
+}
+
+.container-numbers {
+    display: flex;
+}
+
+.number {
+    margin-right: 75px;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+
+@media screen and (max-width: 1030px) {
+    .poster {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .left-column, .right-column {
+        max-width: 380px;
+    }
+
+    .top-info {
+        flex-direction: column;
+    }
+
+    .wrapper-genre {
+        display: flex;
+        margin-top: 0;
+    }
+
+    .genre {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    .runtime {
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+
+    .runtime-site-link {
+        display: flex;
+    }
+
+    .movie-link {
+        margin-top: 10px;
+    }
+
+    .release-date {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    .number {
+        margin-right: 30px;
+    }
+
+    .details-container {
+        margin: 10px 20px;
+    }
+
+    .benefice {
+        margin-right: 0;
+    }
+}
