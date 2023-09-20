@@ -49,7 +49,7 @@ function MovieDetails({ match }) {
   }
 
   function formatNumberWithCommas(number) {
-    return number.toLocaleString('en-US');
+    return `$${number.toLocaleString('en-US')}`;
   }
 
   const url = localStorage.getItem('url');
@@ -78,7 +78,7 @@ function MovieDetails({ match }) {
                     </div>
                     <div className='runtime-site-link'>
                         <p className='runtime'>{convertMinutesToHours(movieDetails.runtime || '')}</p>
-                        <a href={movieDetails.homepage || ''} target='_blank' rel="noreferrer" className='movie-link'>{movieDetails.title || ''} website</a>
+                        <a href={movieDetails.homepage || ''} target='_blank' rel="noreferrer" className='movie-link'>{movieDetails.title || movieDetails.name} website</a>
                     </div>
                 </div>
                 <div className='wrapper-note'>
@@ -92,15 +92,15 @@ function MovieDetails({ match }) {
                 <div className='container-numbers'>
                     <div className='budget number'>
                         <p className='bold'>Budget :</p>
-                        <p>${formatNumberWithCommas(movieDetails.budget || '')}</p>
+                        <p>{formatNumberWithCommas(movieDetails.budget || 'undefined')}</p>
                     </div>
                     <div className='revenue number'>
                         <p className='bold'>Revenue :</p>
-                        <p>${formatNumberWithCommas(movieDetails.revenue || '')}</p>
+                        <p>{formatNumberWithCommas(movieDetails.revenue || 'undefined')}</p>
                     </div>
                     <div className='benefice number'>
                         <p className='bold'>Bénéfice :</p>
-                        <p>${formatNumberWithCommas(movieDetails.revenue - movieDetails.budget || '')}</p>
+                        <p>{formatNumberWithCommas(movieDetails.revenue - movieDetails.budget || 'undefined')}</p>
                     </div>
                 </div>
                 <div>
